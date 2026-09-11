@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Descubre tu Dosha/Biotipo</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header class="quiz-header">
+        <a href="index.html" class="logo">
+            <img src="/images/logoDosha.svg" alt="Logo">
+        </a>
+    </header>
+
+
+    <main class="quiz-container">
+
+        <!-- Progress -->
+        <div class="progress-section">
+
+            <div class="progress-top">
+                <span id="questionNumber">01</span>
+                <span id="totalQuestions">/ 12</span>
+            </div>
+
+            <div class="progress-track">
+                <div class="progress-fill" id="progressFill"></div>
+            </div>
+
+        </div>
+
+
+        <!-- Quiz -->
+        <section class="quiz-content" id="quizContent">
+
+            <div class="question-intro">
+                <p class="eyebrow">Descubre tu matriz biologica</p>
+
+                <h1 id="question">
+                    Como describirias tu estructura corporal?
+                </h1>
+            </div>
+
+
+            <div class="answers" id="answers">
+                
+            </div>
+
+
+            <div class="quiz-navigation">
+
+                <button
+                    class="back-button"
+                    id="backButton"
+                    type="button"
+                >
+                    ← Regresar
+                </button>
+
+                <span class="select-hint">
+                    Escoje una respuesta para continuar
+                </span>
+
+            </div>
+
+        </section>
+
+
+        <!-- Result -->
+        <section class="result-content hidden" id="resultContent">
+
+            <p class="eyebrow">Tu matriz biologica</p>
+
+            <div class="result-symbols">
+
+                <img
+                    id="resultDoshaSvg"
+                    src=""
+                    alt="Your dominant dosha"
+                >
+                <img
+                    class="result-plus"
+                    src="/images/PLUS.svg"
+                    alt="plus-sign"
+                >
+
+                <img
+                    id="resultBiotypeSvg"
+                    src=""
+                    alt="Your dominant biotype"
+                >
+
+            </div>
+
+            <p class="result-description" id="resultDescription"></p>
+
+            <button class="restart-button" id="restartButton">
+                Volver a empezar
+            </button>
+
+        </section>
+
+    </main>
+
+
+    <script src="quiz.js"></script>
+
+</body>
+</html>
