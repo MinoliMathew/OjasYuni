@@ -501,24 +501,24 @@ function showResults() {
 
     const doshaSvgs = {
 
-        vata: "/images/VATA.svg",
+        vata: "./images/VATA.svg",
 
-        pitta: "/images/PITA.svg",
+        pitta: "./images/PITA.svg",
 
-        kapha: "/images/KAPHA.svg"
+        kapha: "./images/KAPHA.svg"
 
     };
 
 
     const biotypeSvgs = {
 
-        melancolico: "/images/MELANCOLICO.svg",
+        melancolico: "./images/MELANCOLICO.svg",
 
-        sanguineo: "/images/SANGUINEO.svg",
+        sanguineo: "./images/SANGUINEO.svg",
 
-        flematico: "/images/FLEMATICO.svg",
+        flematico: "./images/FLEMATICO.svg",
 
-        colerico: "/images/COLERICO.svg"
+        colerico: "./images/COLERICO.svg"
 
     };
 
