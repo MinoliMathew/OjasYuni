@@ -9,7 +9,7 @@ const questions = [
 
         options: [
             {
-                text: "Finas y delgadas",
+                text: "Fina y delgada",
                 score: { vata: 1 }
             },
             {
@@ -129,7 +129,7 @@ const questions = [
                 score: { flematico: 1 }
             },
             {
-                text: "Temperatura cálida o caliente, textura seca. Tiende a enrojecerse con facilidad y no tolera bien el exceso de calor.",
+                text: "Temperatura cálida o caliente, textura seca. Tiende a enrojecerse con facilidad y no tolera bien el exceso de calor ambiental.",
                 score: { colerico: 1 }
             }
         ]
@@ -138,23 +138,23 @@ const questions = [
     {
         category: "biotipo",
 
-        question: "¿Cómo responde normalmente tu cuerpo al movimiento o ejercicio?",
+        question: "¿Que es lo que mas te molesta o te hace perder la paciencia?",
 
         options: [
             {
-                text: "Te cuesta ganar volumen y puedes sentirte rígida",
+                text: "La superficialidad, el desorden, la impuntualidad y que no se respeten las reglas.",
                 score: { melancolico: 1 }
             },
             {
-                text: "Respondes con facilidad y tienes energía para moverte",
+                text: "La rutina aburrida, el aislamiento, la crítica hacia mi persona y sentirme ignorado.",
                 score: { sanguineo: 1 }
             },
             {
-                text: "Desarrollas fuerza de manera constante y tienes buena resistencia",
+                text: "Las discusiones a gritos, las presiones de tiempo injustificadas y los dramas emocionales.",
                 score: { flematico: 1 }
             },
             {
-                text: "Tiendes a desarrollar fuerza rápidamente y tienes una respuesta física intensa",
+                text: "La incompetencia, la falta de iniciativa y que las cosas no se hagan a mi manera o a mi ritmo.",
                 score: { colerico: 1 }
             }
         ]
@@ -167,19 +167,19 @@ const questions = [
 
         options: [
             {
-                text: "Analizas mucho antes de actuar",
+                text: "Me detengo a analizar las causas y las posibles consecuencias. Busco la solución perfecta y ordenada, aunque me preocupe de más.",
                 score: { melancolico: 1 }
             },
             {
-                text: "Hablas con otros y buscas mantener una actitud positiva",
+                text: "Lo tomo con entusiasmo o ligereza; improviso una solución creativa sobre la marcha y busco apoyo en grupo.",
                 score: { sanguineo: 1 }
             },
             {
-                text: "Mantienes la calma y esperas antes de reaccionar",
+                text: "Mantengo la calma absoluta, no me altero. Prefiero observar y esperar a que las cosas se calmen antes de actuar.",
                 score: { flematico: 1 }
             },
             {
-                text: "Tomas el control y buscas resolverlo inmediatamente",
+                text: "Me activo de inmediato, tomo el control de la situación y dirijo a los demás para resolver el problema rápido. Me molesta la lentitud.",
                 score: { colerico: 1 }
             }
         ]
@@ -543,39 +543,59 @@ function showResults() {
 
     /*Result descriptions*/
 
-    const doshaDescriptions = {
+    const combinationDescriptions = {
 
-        vata:
-            "Vata descripcion",
+        vata: {
 
-        pitta:
-            "Pitta descripcion",
+            melancolico:
+                "Vata + Melancólico: Representa el desequilibrio clásico de Vata, compartiendo las cualidades de frío y sequedad. Cuidar sus pensamientos",
+            sanguineo:
+                "Vata + Sanguíneo: Representa la faceta más extrovertida, alegre y creativa de Vata. El elemento aire dota a este biotipo de una tremenda ligereza. Esforzarse en sus metas",
 
-        kapha:
-            "Kapha descripcion"
+            flematico:
+                "Vata + Flemático: Un temperamento flemático aporta la estabilidad de la que Vata carece. Enfocarse en balancear sus pensamientos con la realidad",
 
-    };
+            colerico:
+                "Vata + Colérico: perfil sumamente rápido, creativo y autoexigente. Tiende a la impaciencia y al estrés cuando las cosas no avanzan a su ritmo."
 
+        },
 
-    const biotypeDescriptions = {
+        pitta: {
 
-        melancolico:
-            "Melancolico descripcion",
+            melancolico:
+                "Pitta + Melancólico: Comparte la naturaleza analítica, el perfeccionismo y la atención al detalle. Un Pitta perfeccionista. Debe mejorar su aceptación al error o incluso al fracaso.",
 
-        sanguineo:
-            "Sanguineo descripcion",
+            sanguineo:
+                "Pitta + Sanguíneo: Se conecta mediante la agudeza mental y el carisma. Es un líder comunicativo. Enfocarse en manejar su competitividad",
 
-        flematico:
-            "Flematico descripcion",
+            flematico:
+                "Pitta + Flemático: Es la combinación menos común por naturaleza, pero representa el estado ideal de equilibrio. Un Pitta que adopta la calma y la estabilidad del flemático se convierte en un líder empático, metódico, paciente y altamente eficiente.",
 
-        colerico:
-            "Colerico descripcion"
+            colerico:
+                "Pitta + Colérico: Se caracteriza por una personalidad intensa y apasionada. Es el líder nato, orientado a la acción. Su digestión y metabolismo son muy fuertes a clave principal es enfriar el cuerpo y calmar la mente."
 
-    };
+        },
+
+        kapha: {
+
+            melancolico:
+                "Kapha + Melancólico: una persona de naturaleza tranquila, compasiva que destaca por su profunda lealtad y apego al pasado, pero que ante el estrés tiende a manifestar introversión y un estancamiento emocional en forma de nostalgia",
+
+            sanguineo:
+                "Kapha + Sanguíneo: Cruza la calma de Kapha con la extroversión y calidez del temperamento sanguíneo. Cuidar las adicciones, estar alerta al control externo.",
+
+            flematico:
+                "Kapha + Flemático: Es la expresión más natural y equilibrada de este biotipo, ya que ambos sistemas comparten los elementos agua y tierra. Esforzarse en salir de la zona de confort.",
+
+            colerico:
+                "Kapha + Colérico: Es una combinación inusual que roza el biotipo mixto. El impulso colérico empuja la pesadez natural de Kapha hacia la acción. Debe estar siempre alerta a sus emociones."
+
+        }
+    };  
 
 
     resultDescription.textContent =
-        `${doshaDescriptions[dominantDosha]} ${biotypeDescriptions[dominantBiotype]}`;
+       combinationDescriptions[dominantDosha][dominantBiotype];
 
 
     /*Show result*/
